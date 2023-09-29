@@ -1,0 +1,118 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    /* Fundo escuro *
+    /color: #fff;
+    /* Texto branco */
+}
+
+header {
+    background-color: #311a95;
+    /* Azul vibrante */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+header h1 {
+    font-size: 0px;
+    display: none;
+}
+header a>img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+main {
+    display: flex;
+    /* Usar flexbox para centralizar o conteúdo verticalmente */
+    flex-direction: column;
+    /* Alinhar verticalmente o conteúdo */
+    align-items: center;
+    /* Centralizar horizontalmente o conteúdo */
+    min-height: 100vh;
+    /* Garante que o conteúdo ocupa a tela inteira */
+    padding: 1rem;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Estilos para telas menores */
+.line-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
+    /* Cinza escuro */
+    border: 1px solid #555;
+    /* Cinza mais claro */
+}
+
+.line-content {
+    flex: 1;
+    /* Ocupa todo o espaço vertical disponível */
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.translation-input {
+    width: 90%;
+    padding: 0.5rem;
+    background-color: #444;
+    /* Cinza ainda mais escuro */
+    color: #fff;
+    /* Texto branco */
+    border: none;
+    outline: none;
+    /* Remova o contorno padrão */
+}
+
+button {
+    background-color: #311a95;
+    /* Azul vibrante */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    main {
+        flex-direction: row;
+        /* Alinhar horizontalmente o conteúdo em telas maiores */
+        justify-content: center;
+        /* Centralizar o conteúdo horizontalmente */
+    }
+
+    .line-item {
+        flex-direction: row;
+        /* Alinhar horizontalmente o conteúdo das linhas */
+        align-items: center;
+        /* Centralizar verticalmente o conteúdo das linhas */
+        margin-right: 1rem;
+        margin-bottom: 0;
+        /* Remove a margem inferior das linhas */
+        width: auto;
+        /* Largura automática */
+    }
+
+    .line-content {
+        margin-right: 1rem;
+    }
+
+    .translation-input {
+        width: 200px;
+        /* Defina um tamanho padrão para os inputs em telas maiores */
+        margin-top: 0;
+        /* Remova a margem superior dos inputs */
+    }
+}

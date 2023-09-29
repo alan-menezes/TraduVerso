@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tradução de Arquivos</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>TraduVerso</h1>
+            <a href="index.html">
+                <img src="imagens/traduverso-logo.png">
+            </a>
+        </header>
+        <main>
+            <div class="container">
+                <!-- Página de Upload -->
+                <form id="formularioUpload" enctype="multipart/form-data">
+                    <input type="file" name="entradaArquivo" accept=".txt" />
+                    <label for="entradaArquivo" class="upload-label">Fazer Upload</label>
+                    <button type="submit">Fazer Upload</button>
+                </form>
+
+                <!-- Página de Exibição e Tradução -->
+                <div id="paginaTraducao" style="display: none;">
+                    <h2>Tradução de Linhas</h2>
+                    <div id="containerLinhas"></div>
+                    <button id="botaoPrevisualizacao">Visualizar Tradução</button>
+                </div>
+
+                <!-- Página de Prévia da Tradução -->
+                <div id="paginaPrevisualizacao" style="display: none;">
+                    <h2>Prévia da Tradução</h2>
+                    <div id="containerPrevisualizacao"></div>
+                    <button id="exportarDocx">Exportar como .docx</button>
+                    <button id="exportarPdf">Exportar como .pdf</button>
+                    <button id="exportarTxt">Exportar como .txt</button>
+                </div>
+            </div>
+        </main>
+        <!--docxTemplate-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.39.1/docxtemplater.js"></script>
+        <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
+        <script src="https://unpkg.com/pizzip@3.1.4/dist/pizzip-utils.js"></script>
+        <!--jsPDF-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+            integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+            crossorigin="anonymous"></script>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
